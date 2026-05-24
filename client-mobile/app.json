@@ -19,6 +19,7 @@
         "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#ffffff"
       },
+      "jsEngine": "jsc",
       "edgeToEdgeEnabled": true,
       "package": "com.adamarbain.dengueeyemobileapp",
       "googleServicesFile": "./google-services.json"
