@@ -1059,7 +1059,7 @@ def detect_breeding_areas():
         else:
             risk_level = "low"
         
-        # Get recommendations
+        # Get   recommendations
         recommendations = prediction_service.breeding_area_service.get_risk_recommendations(
             risk_level, len(all_detections)
         )
