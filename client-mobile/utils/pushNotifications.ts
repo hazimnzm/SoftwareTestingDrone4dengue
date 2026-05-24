@@ -290,6 +290,11 @@ export async function unregisterDeviceToken(): Promise<boolean> {
  * Always attempts registration to ensure token is saved on server
  */
 export async function initializePushNotifications(): Promise<void> {
+  // ✅ ADD THIS GUARD HERE (FIRST THING INSIDE FUNCTION)
+  if (__DEV__ || process.env.EXPO_PUBLIC_DISABLE_PUSH === 'true') {
+    console.log("Push notifications disabled (dev/test mode)");
+    return;
+  }
   try {
     console.log('[PUSH NOTIFICATIONS] ========================================');
     console.log('[PUSH NOTIFICATIONS] Initializing push notifications...');
